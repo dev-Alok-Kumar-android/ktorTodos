@@ -2,7 +2,6 @@ package com.alokkumar.data.tables
 
 import org.jetbrains.exposed.dao.id.IntIdTable
 import org.jetbrains.exposed.sql.Column
-import org.jetbrains.exposed.sql.Table
 
 object UserTable : IntIdTable("user") {
     val name: Column<String> = varchar("name", 255)

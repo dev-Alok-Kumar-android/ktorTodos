@@ -12,6 +12,7 @@ fun Application.configureAuthentication() {
 
     install(Authentication) {
         jwt("auth-jwt") {
+            realm = "Ktor Todo App"
             verifier(jwtService.verifier)
             validate { credential ->
                 val id = credential.payload.getClaim("id").asInt()

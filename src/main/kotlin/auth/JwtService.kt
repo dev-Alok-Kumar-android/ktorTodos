@@ -9,7 +9,7 @@ import java.util.*
 class JwtService {
 
     private val issuer = "Server"
-    private val jwtSecret = System.getenv("JWT_SECRET")
+    private val jwtSecret = System.getenv("JWT_SECRET") ?: "your-super-secret-key"
     private val algorithm = Algorithm.HMAC512(jwtSecret)
 
     val verifier: JWTVerifier = JWT
