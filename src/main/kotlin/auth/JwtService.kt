@@ -1,6 +1,6 @@
 package com.alokkumar.auth
 
-import com.alokkumar.data.User
+import com.alokkumar.data.dto.User
 import com.auth0.jwt.JWT
 import com.auth0.jwt.JWTVerifier
 import com.auth0.jwt.algorithms.Algorithm
@@ -20,7 +20,7 @@ class JwtService {
     fun generateToken(user: User): String = JWT.create()
         .withSubject("Authentication")
         .withIssuer(issuer)
-        .withClaim("id", user.id)
+        .withClaim("userId", user.id)
         .withExpiresAt(expiresAt())
         .sign(algorithm)
 

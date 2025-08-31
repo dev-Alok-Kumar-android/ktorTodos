@@ -49,4 +49,5 @@ dependencies {
     implementation("com.auth0:java-jwt:4.5.0")
     implementation("io.ktor:ktor-server-auth")
     implementation("io.ktor:ktor-server-auth-jwt")
+    testImplementation("io.ktor:ktor-server-test-host-jvm:3.2.3")
 }

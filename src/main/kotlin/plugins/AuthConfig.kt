@@ -15,7 +15,7 @@ fun Application.configureAuthentication() {
             realm = "Ktor Todo App"
             verifier(jwtService.verifier)
             validate { credential ->
-                val id = credential.payload.getClaim("id").asInt()
+                val id = credential.payload.getClaim("userId").asInt()
                 val user = userRepository.findUserById(id)
                 if (user != null) {
                     JWTPrincipal(credential.payload)

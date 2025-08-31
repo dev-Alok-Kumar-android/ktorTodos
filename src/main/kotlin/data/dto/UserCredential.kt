@@ -1,4 +1,4 @@
-package com.alokkumar.auth
+package com.alokkumar.data.dto
 
 import kotlinx.serialization.Serializable
 
